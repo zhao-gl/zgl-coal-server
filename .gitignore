@@ -1,0 +1,87 @@
+# -------------------------- Go 项目核心忽略 --------------------------
+# 编译产物
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+# 可执行文件（go build 生成）
+/coal  # 对应项目名称，根据实际生成的可执行文件名调整
+# 编译缓存
+__debug_bin
+# Go 模块缓存
+go.mod.sum
+go.sum
+# 测试相关
+*.test
+*.out
+# 覆盖率报告
+coverage.out
+coverage.html
+# 临时构建目录
+/build/
+/dist/
+/tmp/
+
+# -------------------------- 系统/终端临时文件 --------------------------
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+# Linux
+*~
+# 日志文件
+*.log
+*.log.*
+
+# -------------------------- 编辑器/IDE 配置 --------------------------
+# VS Code
+.vscode/
+*.code-workspace
+# GoLand/IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+# Sublime
+*.sublime-*
+# Vim
+*.swp
+*.swo
+# 其他
+.editorconfig
+.project
+.classpath
+
+# -------------------------- 项目敏感/自定义文件 --------------------------
+# 环境变量文件（含密钥、数据库配置，严禁提交）
+*.env
+.env
+.env.*
+!.env.example  # 允许提交示例文件（若需提供模板）
+# 数据库文件（SQLite3 数据库，本地开发数据，不提交）
+*.db
+*.sqlite
+*.sqlite3
+# 配置文件（本地自定义配置，非默认配置）
+/config/local.yml
+/config/dev.yml
+# 第三方依赖（若手动下载，而非通过 go mod）
+/vendor/
+
+# -------------------------- 其他杂项 --------------------------
+# 临时文件
+*.tmp
+*.bak
+# 备份文件
+*_backup.*
+# 压缩包
+*.zip
+*.tar.gz
+*.tar.bz2
